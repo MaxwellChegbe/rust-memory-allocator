@@ -3,7 +3,7 @@
 This repository is a collection of memory allocator implementations written in Rust. My goal is to move from simple allocation like Bumps to more complex, production-ready designs while documenting the underlying systems concepts.
 
 ## Project Goal
-To understand memory management by building it from scratch. This project focuses on the "why" of memory layout—alignment requirements, pointer arithmetic, and cache efficiency—rather than just using high-level abstractions.
+To understand memory management by building it from scratch. This project focuses on the "why" of memory layout alignment requirements, pointer arithmetic, and cache efficiency, rather than just using high-level abstractions.
 
 ## Implementations
 
