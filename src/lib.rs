@@ -32,7 +32,7 @@ impl BumpAllocator {
         }
 
         // POINTER ARITHMETIC (UNSAFE):
-        // We calculate the exact memory address and cast it to a pointer of type T
+        // calculate the exact memory address and cast it to a pointer of type T
         let ptr = unsafe {
             let p = self.buffer.as_mut_ptr().add(aligned_pos) as *mut T;
             p.write(value); // Writes the value into the buffer
