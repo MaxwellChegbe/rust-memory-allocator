@@ -1,12 +1,35 @@
-   0.021664100s  INFO prepare_target{force=false package_id=rust-memory-allocator v0.1.0 (C:\Users\pc\real_lessons\rust-memory-allocator) target="rust-memory-allocator"}: cargo::core::compiler::fingerprint: stale: changed "C:\\Users\\pc\\real_lessons\\rust-memory-allocator\\src\\main.rs"
-   0.021719100s  INFO prepare_target{force=false package_id=rust-memory-allocator v0.1.0 (C:\Users\pc\real_lessons\rust-memory-allocator) target="rust-memory-allocator"}: cargo::core::compiler::fingerprint:           (vs) "C:\\Users\\pc\\real_lessons\\rust-memory-allocator\\target\\debug\\.fingerprint\\rust-memory-allocator-2daedced3eae6033\\dep-bin-rust-memory-allocator"
-   0.021743800s  INFO prepare_target{force=false package_id=rust-memory-allocator v0.1.0 (C:\Users\pc\real_lessons\rust-memory-allocator) target="rust-memory-allocator"}: cargo::core::compiler::fingerprint:                FileTime { seconds: 13412530292, nanos: 792641700 } < FileTime { seconds: 13412530381, nanos: 980674700 }
-   0.022123600s  INFO prepare_target{force=false package_id=rust-memory-allocator v0.1.0 (C:\Users\pc\real_lessons\rust-memory-allocator) target="rust-memory-allocator"}: cargo::core::compiler::fingerprint: fingerprint dirty for rust-memory-allocator v0.1.0 (C:\Users\pc\real_lessons\rust-memory-allocator)/Check { test: false }/TargetInner { name: "rust-memory-allocator", doc: true, ..: with_path("C:\\Users\\pc\\real_lessons\\rust-memory-allocator\\src\\main.rs", Edition2024) }
-   0.022167100s  INFO prepare_target{force=false package_id=rust-memory-allocator v0.1.0 (C:\Users\pc\real_lessons\rust-memory-allocator) target="rust-memory-allocator"}: cargo::core::compiler::fingerprint:     dirty: FsStatusOutdated(StaleItem(ChangedFile { reference: "C:\\Users\\pc\\real_lessons\\rust-memory-allocator\\target\\debug\\.fingerprint\\rust-memory-allocator-2daedced3eae6033\\dep-bin-rust-memory-allocator", reference_mtime: FileTime { seconds: 13412530292, nanos: 792641700 }, stale: "C:\\Users\\pc\\real_lessons\\rust-memory-allocator\\src\\main.rs", stale_mtime: FileTime { seconds: 13412530381, nanos: 980674700 } }))
-   0.023494900s  INFO prepare_target{force=false package_id=rust-memory-allocator v0.1.0 (C:\Users\pc\real_lessons\rust-memory-allocator) target="rust-memory-allocator"}: cargo::core::compiler::fingerprint: stale: changed "C:\\Users\\pc\\real_lessons\\rust-memory-allocator\\src\\main.rs"
-   0.023523400s  INFO prepare_target{force=false package_id=rust-memory-allocator v0.1.0 (C:\Users\pc\real_lessons\rust-memory-allocator) target="rust-memory-allocator"}: cargo::core::compiler::fingerprint:           (vs) "C:\\Users\\pc\\real_lessons\\rust-memory-allocator\\target\\debug\\.fingerprint\\rust-memory-allocator-8f8792f0ad2ee65d\\dep-test-bin-rust-memory-allocator"
-   0.023542300s  INFO prepare_target{force=false package_id=rust-memory-allocator v0.1.0 (C:\Users\pc\real_lessons\rust-memory-allocator) target="rust-memory-allocator"}: cargo::core::compiler::fingerprint:                FileTime { seconds: 13412530362, nanos: 183995900 } < FileTime { seconds: 13412530381, nanos: 980674700 }
-   0.023865900s  INFO prepare_target{force=false package_id=rust-memory-allocator v0.1.0 (C:\Users\pc\real_lessons\rust-memory-allocator) target="rust-memory-allocator"}: cargo::core::compiler::fingerprint: fingerprint dirty for rust-memory-allocator v0.1.0 (C:\Users\pc\real_lessons\rust-memory-allocator)/Check { test: true }/TargetInner { name: "rust-memory-allocator", doc: true, ..: with_path("C:\\Users\\pc\\real_lessons\\rust-memory-allocator\\src\\main.rs", Edition2024) }
-   0.023908600s  INFO prepare_target{force=false package_id=rust-memory-allocator v0.1.0 (C:\Users\pc\real_lessons\rust-memory-allocator) target="rust-memory-allocator"}: cargo::core::compiler::fingerprint:     dirty: FsStatusOutdated(StaleItem(ChangedFile { reference: "C:\\Users\\pc\\real_lessons\\rust-memory-allocator\\target\\debug\\.fingerprint\\rust-memory-allocator-8f8792f0ad2ee65d\\dep-test-bin-rust-memory-allocator", reference_mtime: FileTime { seconds: 13412530362, nanos: 183995900 }, stale: "C:\\Users\\pc\\real_lessons\\rust-memory-allocator\\src\\main.rs", stale_mtime: FileTime { seconds: 13412530381, nanos: 980674700 } }))
+   0.034440300s  INFO prepare_target{force=false package_id=rust-memory-allocator v0.1.0 (C:\Users\pc\real_lessons\rust-memory-allocator) target="alloc_bench"}: cargo::core::compiler::fingerprint: fingerprint error for rust-memory-allocator v0.1.0 (C:\Users\pc\real_lessons\rust-memory-allocator)/Check { test: true }/TargetInner { kind: "bench", name: "alloc_bench", tested: false, ..: with_path("C:\\Users\\pc\\real_lessons\\rust-memory-allocator\\benches\\alloc_bench.rs", Edition2024) }
+   0.034542200s  INFO prepare_target{force=false package_id=rust-memory-allocator v0.1.0 (C:\Users\pc\real_lessons\rust-memory-allocator) target="alloc_bench"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\pc\real_lessons\rust-memory-allocator\target\debug\.fingerprint\rust-memory-allocator-c352a52b3f6eb5cc\test-bench-alloc_bench`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+             at /rustc/ed61e7d7e242494fb7057f2657300d9e77bb4fcb/library\std\src\..\..\backtrace\src\backtrace/win64.rs:85:14
+   1: std::backtrace::Backtrace::capture
+             at /rustc/ed61e7d7e242494fb7057f2657300d9e77bb4fcb/library\std\src/backtrace.rs:296:9
+   2: <std::io::error::Error as anyhow::context::ext::StdError>::ext_context::<alloc::string::String>
+   3: cargo_util::paths::read
+   4: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   5: cargo::core::compiler::fingerprint::prepare_target
+   6: cargo::core::compiler::compile
+   7: <cargo::core::compiler::build_runner::BuildRunner>::compile
+   8: cargo::ops::cargo_compile::compile_ws
+   9: cargo::ops::cargo_compile::compile_with_exec
+  10: cargo::ops::cargo_compile::compile
+  11: cargo::commands::check::exec
+  12: <cargo::cli::Exec>::exec
+  13: cargo::cli::main
+  14: cargo::main
+  15: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  16: std::rt::lang_start::<()>::{closure#0}
+  17: std::rt::lang_start_internal
+             at /rustc/ed61e7d7e242494fb7057f2657300d9e77bb4fcb/library\core\src\ops/function.rs:287:21
+  18: main
+  19: __tmainCRTStartup
+  20: mainCRTStartup
+  21: <unknown>
+  22: <unknown>
     Checking rust-memory-allocator v0.1.0 (C:\Users\pc\real_lessons\rust-memory-allocator)
-    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.33s
+error: could not compile `rust-memory-allocator` (bench "alloc_bench") due to 1 previous error
